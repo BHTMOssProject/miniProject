@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "person.h"
+#include "manager.h"
 
 int main() {
     Person *p;
@@ -19,17 +20,17 @@ int main() {
             }
         }
         if (menu == 1) {
-            createProduct(p, count);
+            createPerson(p, count);
             count++;
         }
         else if (menu == 2) {
-            listProduct(p, count);
+            listPerson(p, count);
         }
         else if (menu == 3) {
-            updateProduct(p, count);
+            updateData(p, count);
         }
         else if (menu == 4) {
-            deleteProduct(p, count);
+            deletePerson(p, count);
         }
     }
 }
