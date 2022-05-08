@@ -1,6 +1,6 @@
 #include "manager.h"
 
-// 커뮤니티(모든 User) 확인
+// 커뮤니티(모든 User) 확인 
 void listPerson(Person *p, int count)
 {
     int user_cnt = 0;
@@ -14,8 +14,8 @@ void listPerson(Person *p, int count)
             strcpy(gender, "남자");
         user_cnt++;
         printf("-----------------------------\n");
-        print("*** %d번 User ***\n", i+1);
-        printf("이름 : %s | 나이 : %d | 성별 : %s | MBTI : %s\n", p[i].name, p[i].age, p[i].gender, p[i].mbti);
+        printf("*** %d번 User ***\n", i+1);
+        printf("이름 : %s | 나이 : %d | 성별 : %s | MBTI : %s\n", p[i].name, p[i].age, gender, p[i].mbti);
     }
     printf("-----------------------------\n");
     printf("	현재 총 User : %d명\n", user_cnt);
