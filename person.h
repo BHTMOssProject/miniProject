@@ -7,8 +7,8 @@
 typedef struct person {
     char name[20];
     int age;
-    int gender; // 0 ë‚¨ì, 1 ì—¬ì
-    char mbti[4];
+    int gender; // 0 ³²ÀÚ, 1 ¿©ÀÚ
+    char mbti[10];
 } Person;
 
 int createPerson(Person *p, int count);

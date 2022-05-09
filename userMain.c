@@ -15,7 +15,7 @@ int main() {
         if (menu == 0) break;
         if (menu == 2 || menu == 3 || menu == 4) {
             if (count == 0) {
-                printf("=> ì‚¬ëžŒ ì—†ìŒ\n");
+                printf("=> »ç¶÷ ¾øÀ½\n");
                 continue;
             }
         }
