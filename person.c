@@ -1,6 +1,6 @@
 #include "person.h"
 
-// ì»¤ë®¤ë‹ˆí‹°(ëª¨ë“  User) í™•ì¸ 
+// Ä¿¹Â´ÏÆ¼(¸ğµç User) È®ÀÎ 
 void listPerson(Person *p, int count)
 {
     int user_cnt = 0;
@@ -9,48 +9,51 @@ void listPerson(Person *p, int count)
     for (int i = 0; i < count; i++) {
         if (p[i].age == -1) continue;
         if (p[i].gender) 
-            strcpy(gender, "ì—¬ì");
+            strcpy(gender, "¿©ÀÚ");
         else
-            strcpy(gender, "ë‚¨ì");
+            strcpy(gender, "³²ÀÚ");
         user_cnt++;
         printf("-----------------------------\n");
-        printf("*** %dë²ˆ User ***\n", i+1);
-        printf("ì´ë¦„ : %s | ë‚˜ì´ : %d | ì„±ë³„ : %s | MBTI : %s\n", p[i].name, p[i].age, gender, p[i].mbti);
+        printf("*** %d¹ø User ***\n", i+1);
+        printf("ÀÌ¸§ : %s | ³ªÀÌ : %d | ¼ºº° : %s | MBTI : %s\n", p[i].name, p[i].age, gender, p[i].mbti);
     }
     printf("-----------------------------\n");
-    printf("	í˜„ì¬ ì´ User : %dëª…\n", user_cnt);
+    printf("	ÇöÀç ÃÑ User : %d¸í\n", user_cnt);
     printf("-----------------------------\n");
 }
 
 int createPerson(Person *p, int count){
 
-    printf("ì´ë¦„ì€? ");
+    printf("ÀÌ¸§Àº? ");
     scanf("%s", p[count].name);
-    printf("ë‚˜ì´ëŠ”? ");
+    getchar();
+    printf("³ªÀÌ´Â? ");
     scanf("%d", &p[count].age);
-    printf("ì„±ë³„ì€?(ë‚¨ì:0, ì—¬ì:1) ");
+    printf("¼ºº°Àº?(³²ÀÚ:0, ¿©ÀÚ:1) ");
     scanf("%d", &p[count].gender);
-    printf("mbtiëŠ”? ");
+    getchar();
+    printf("mbti´Â? ");
     scanf("%s", p[count].mbti);
+    getchar();
     
     return 1;
 }
 
-int readPerson(Person *p, int count) // ë²ˆí˜¸ ì…ë ¥ ë°›ê³  ê·¸ ì‚¬ëŒ ì •ë³´ ì¶œë ¥
+int readPerson(Person *p, int count) // ¹øÈ£ ÀÔ·Â ¹Ş°í ±× »ç¶÷ Á¤º¸ Ãâ·Â
 {
     int printNum;
     char gender[10];
-    printf("ëª‡ë²ˆì§¸ ì‚¬ëŒì„ í™•ì¸ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ");
+    printf("¸î¹øÂ° »ç¶÷À» È®ÀÎ ÇÏ½Ã°Ú½À´Ï±î? ");
     scanf("%d", &printNum);
     printNum--;
     if (p[count].gender) 
-            strcpy(gender, "ì—¬ì");
+            strcpy(gender, "¿©ÀÚ");
         else
-            strcpy(gender, "ë‚¨ì");
+            strcpy(gender, "³²ÀÚ");
     printf("=====================================\n");    
-    printf("ì‚¬ëŒ: %s\n", p[printNum].name);
-    printf("ë‚˜ì´: %d\n", p[printNum].age);
-    printf("ì„±ë³„: %s\n", gender);
+    printf("»ç¶÷: %s\n", p[printNum].name);
+    printf("³ªÀÌ: %d\n", p[printNum].age);
+    printf("¼ºº°: %s\n", gender);
     printf("mbti: %s\n", p[printNum].mbti);
     printf("=====================================\n");
 
@@ -58,46 +61,46 @@ int readPerson(Person *p, int count) // ë²ˆí˜¸ ì…ë ¥ ë°›ê³  ê·¸ ì‚¬ëŒ ì •ë³´ ì
 }
 
 
-// ì—…ë°ì´íŠ¸ í•­ëª©ì€ ë‚˜ì´ì™€ MBTI
+// ¾÷µ¥ÀÌÆ® Ç×¸ñÀº ³ªÀÌ¿Í MBTI
 int updateData(Person *p, int count) 
 {
     int num;
     
     listPerson(p, count);
 
-    printf("ì—…ë°ì´íŠ¸í•  User ë²ˆí˜¸ (ì·¨ì†Œ : 0) : ");
+    printf("¾÷µ¥ÀÌÆ®ÇÒ User ¹øÈ£ (Ãë¼Ò : 0) : ");
     scanf("%d", &num);
 
     if (num == 0) return 0;
 
-    printf("ë‚˜ì´ : ");
+    printf("³ªÀÌ : ");
     scanf("%d", &p[num-1].age);
     printf("MBTI : ");
     scanf(" %s", p[num-1].mbti);
     
-    printf("=> ì—…ë°ì´íŠ¸ ì™„ë£Œ!\n");
+    printf("=> ¾÷µ¥ÀÌÆ® ¿Ï·á!\n");
 
     return 1;
 }
 
-// ì‚­ì œ ì²˜ë¦¬ëŠ” age = -1ìœ¼ë¡œ
+// »èÁ¦ Ã³¸®´Â age = -1À¸·Î
 int deletePerson(Person *p, int count)
 {
     int num, answer;
 
     listPerson(p, count);
 
-    printf("ì‚­ì œí•  User ë²ˆí˜¸ (ì·¨ì†Œ : 0) : ");
+    printf("»èÁ¦ÇÒ User ¹øÈ£ (Ãë¼Ò : 0) : ");
     scanf("%d", &num);
 
     if (num == 0) return 0;
 
-    printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? (ì‚­ì œ : 1) ");
+    printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? (»èÁ¦ : 1) ");
     scanf("%d", &answer);
 
     if (answer == 1) {
         p[num-1].age = -1;
-        printf("=> ì‚­ì œë¨\n");
+        printf("=> »èÁ¦µÊ\n");
     }
 
     getchar();

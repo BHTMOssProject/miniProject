@@ -1,18 +1,18 @@
 #include "stdio.h"
 #include "manager.h"
 
-// Î©îÎâ¥Î∞î
+// ∏ﬁ¥∫πŸ
 int selectMenu()
 {
     int menu;
 
-    printf("\n ÌïúÎèô ÏπúÍµ¨ Ï∞æÍ∏∞ - ÎÇòÏùò ÏπúÍµ¨Í∞Ä ÎêòÏñ¥Ï§ò!\n");
-    printf("0. Ï¢ÖÎ£å\n");
-    printf("1. User Îì±Î°ù\n");
-    printf("2. Ïª§ÎÆ§ÎãàÌã∞ ÌôïÏù∏\n");
-    printf("3. User ÏóÖÎç∞Ïù¥Ìä∏\n");
-    printf("4. User ÏÇ≠Ï†ú\n");
-    printf("=> ÏÑ†ÌÉùÌï† Î©îÎâ¥ : ");
+    printf("\n«—µø ƒ£±∏ √£±‚ - ≥™¿« ƒ£±∏∞° µ«æÓ¡‡!\n");
+    printf("0. ¡æ∑·\n");
+    printf("1. User µÓ∑œ\n");
+    printf("2. ƒøπ¬¥œ∆º »Æ¿Œ\n");
+    printf("3. User æ˜µ•¿Ã∆Æ\n");
+    printf("4. User ªË¡¶\n");
+    printf("=> º±≈√«“ ∏ﬁ¥∫ : ");
     scanf("%d", &menu);
 
     return menu;
