@@ -7,7 +7,7 @@
 typedef struct person {
     char name[20];
     int age;
-    int gender; // 0 여자, 1 남자
+    int gender; // 0 남자, 1 여자
     char mbti[4];
 } Person;
 

@@ -28,12 +28,10 @@ int createPerson(Person *p, int count){
     scanf("%s", p[count].name);
     printf("나이는? ");
     scanf("%d", &p[count].age);
-    getchar();
-    printf("성별은? ");
+    printf("성별은?(남자:0, 여자:1) ");
     scanf("%d", &p[count].gender);
     printf("mbti는? ");
     scanf("%s", p[count].mbti);
-    count++;    
     
     return 1;
 }

@@ -6,7 +6,7 @@
 
 int main() {
     Person *p;
-    int count, menu = 0;
+    int count=0, menu = 0;
 
     p = (Person *)malloc(sizeof(Person) * MAX_SIZE);
 
@@ -15,7 +15,7 @@ int main() {
         if (menu == 0) break;
         if (menu == 2 || menu == 3 || menu == 4) {
             if (count == 0) {
-                printf("=> 상품 없음\n");
+                printf("=> 사람 없음\n");
                 continue;
             }
         }
