@@ -17,7 +17,7 @@
 21900428 양병훈: Owner 
 21900584 이태민: Contributor
 
-### 결과 이미지
+### 실행 결과 이미지 모음
 <img width="451" alt="실행1" src="https://user-images.githubusercontent.com/67420453/167416298-ac6f9827-d763-4766-9833-cfd8eed29f24.png">
 <img width="473" alt="실행2" src="https://user-images.githubusercontent.com/67420453/167416311-05062438-5b41-449c-8923-88a737722807.png">
 <img width="503" alt="실행3" src="https://user-images.githubusercontent.com/67420453/167416318-08736503-31f2-4e48-83b1-5c5c25ace0db.png">
