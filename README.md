@@ -15,8 +15,8 @@
 언어: C
 
 ### 팀 소개
-21900428 양병훈: Owner 
-21900584 이태민: Contributor
+21900428 양병훈: Owner - create와 read 구현, wiki 작성
+21900584 이태민: Contributor - srtuct 및 update와 delete 구현, readme 파일 작성
 
 ### 실행 결과 이미지 모음
 <img width="451" alt="실행1" src="https://user-images.githubusercontent.com/67420453/167416298-ac6f9827-d763-4766-9833-cfd8eed29f24.png">
