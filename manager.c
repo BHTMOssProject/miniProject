@@ -1,20 +1,22 @@
 #include <stdio.h>
-#include "manager.h"
+#include <stdlib.h>
+#include <string.h>
 
-// ¸Ş´º¹Ù
-int selectMenu()
-{
-    int menu;
+#define MAX_SIZE 100
 
-    printf("\nÇÑµ¿ Ä£±¸ Ã£±â - ³ªÀÇ Ä£±¸°¡ µÇ¾îÁà!\n");
-    printf("=====================================\n");
-    printf("0. Á¾·á\n");
-    printf("1. User µî·Ï\n");
-    printf("2. Ä¿¹Â´ÏÆ¼ È®ÀÎ\n");
-    printf("3. User ¾÷µ¥ÀÌÆ®\n");
-    printf("4. User »èÁ¦\n");
-    printf("\n=> ¼±ÅÃÇÒ ¸Ş´º : ");
-    scanf("%d", &menu);
+typedef struct person {
+    char name[20];
+    int age;
+    int gender; // 0 ë‚¨ì, 1 ì—¬ì
+    char mbti[10];
+    char message[100];
+} Person;
 
-    return menu;
-}
+int createPerson(Person *p, int count);
+int readPerson(Person *p, int count);
+int updateData(Person *p, int count);
+int deletePerson(Person *p, int count);
+void listPerson(Person *p, int count);
+void checkSimilarity(Person *p, int count);
+void leaveMessage(Person *p, int count);
+void checkMessage(Person *p, int count);
