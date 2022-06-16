@@ -9,6 +9,9 @@
 2. readPerson: 원하는 사람 번호 입력 받고 그 사람에 대한 정보 출력
 3. updatePerson: 업데이트를 원하는 사람 번호를 입력받고 정보 수정
 4. deltePerson: 삭제를 원하는 사람 번호 입력 받고 삭제(age=-1로 처리)
+5. checkSimilarity: 친구와의 유사도 출력(사용자 2명 입력 시 2명에 대한 유사도 출력)
+6. leaveMessage: 메시지 전송(struct에 메시지 추가)
+7. checkMessage: 메시지 확인(친구 입력시 해당 친구에 해당하는 메시지 출력)
 
 ### 개발환경 및 언어
 개발 환경: VSCode
