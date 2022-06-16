@@ -1,22 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "manager.h"
 
-#define MAX_SIZE 100
+// 메뉴바
+int selectMenu()
+{
+    int menu;
 
-typedef struct person {
-    char name[20];
-    int age;
-    int gender; // 0 남자, 1 여자
-    char mbti[10];
-    char message[100];
-} Person;
+    printf("\n한동 친구 찾기 - 나의 친구가 되어줘!\n");
+    printf("=====================================\n");
+    printf("0. 종료\n");
+    printf("1. User 등록\n");
+    printf("2. 커뮤니티 확인\n");
+    printf("3. User 업데이트\n");
+    printf("4. User 삭제\n");
+    printf("5. 유사도 검색\n");
+    printf("6. 메시지 남기기\n");
+    printf("7. 메시지 확인\n");
+    printf("\n=> 선택할 메뉴 : ");
+    scanf("%d", &menu);
 
-int createPerson(Person *p, int count);
-int readPerson(Person *p, int count);
-int updateData(Person *p, int count);
-int deletePerson(Person *p, int count);
-void listPerson(Person *p, int count);
-void checkSimilarity(Person *p, int count);
-void leaveMessage(Person *p, int count);
-void checkMessage(Person *p, int count);
+    return menu;
+}
