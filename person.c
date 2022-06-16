@@ -128,10 +128,10 @@ void checkSimilarity(Person *p, int count)
     n1 = n1-1;
     n2 = n2-1;
 
-    if(strcmp(p[n1].name, p[n2].name)==0) s_count++; printf("이름 같음\n");
-    if(p[n1].gender==p[n2].gender) s_count++; printf("성별 같음\n");
-    if(p[n1].age==p[n2].age) s_count++; printf("나이 같음\n");
-    if(strcmp(p[n1].mbti, p[n2].mbti)==0) s_count++; printf("mbit 같음\n");
+    if(strcmp(p[n1].name, p[n2].name)==0) s_count++; 
+    if(p[n1].gender==p[n2].gender) s_count++; 
+    if(p[n1].age==p[n2].age) s_count++;
+    if(strcmp(p[n1].mbti, p[n2].mbti)==0) s_count++; 
 
     int similarity = (s_count*100)/4;
     printf("%s와 %s의 유사도는 %d%%입니다.\n", p[n1].name, p[n2].name, similarity);
