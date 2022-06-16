@@ -15,7 +15,7 @@ int main() {
         if (menu == 0) break;
         if (menu == 2 || menu == 3 || menu == 4) {
             if (count == 0) {
-                printf("=> »ç¶÷ ¾øÀ½\n");
+                printf("=> ì„ íƒí•  ë©”ë‰´ : \n");
                 continue;
             }
         }
@@ -32,5 +32,14 @@ int main() {
         else if (menu == 4) {
             deletePerson(p, count);
         }
+        else if (menu == 5) {
+            checkSimilarity(p, count);
+        }        
+        else if (menu == 6) {
+            leaveMessage(p, count);
+        }            
+        else if (menu == 7) {
+            checkMessage(p, count);
+        }           
     }
 }
